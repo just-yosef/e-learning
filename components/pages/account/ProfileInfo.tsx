@@ -30,7 +30,6 @@ const ProfileInfo = () => {
             console.error("Error fetching user:", error);
             return null;
         }
-
     }
     const [tabs, setTabs] = useState(["Role", "Email", "Phone",])
     const { dir } = useDirection();
@@ -83,9 +82,7 @@ const ProfileInfo = () => {
                                     <>
                                         <div className="flex flex-col sm:mt-4 flex-1">
                                             <h5 className="text-muted-foreground font-light">{t(el.toLowerCase())}</h5>
-                                            {/* @ts-ignore */}
                                             <section className="flex items-center gap-2 mt-3 flex-wrap">
-                                                {/* @ts-ignore */}
                                                 {
                                                     //@ts-ignore
                                                     data?.subjects && i === 3 && data?.subjects?.map((el) => (

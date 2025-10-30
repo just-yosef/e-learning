@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Cairo } from "next/font/google";
 import "./globals.css";
 import PageWrapper from "@/components/PageWrapper";
 import Header from "@/components/Header";
@@ -10,7 +10,7 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const cairo = Cairo({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
@@ -29,7 +29,7 @@ export default function RootLayout({
         <title>الصفحة الرئيسية | تعلمك</title>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-background antialiased dark:bg-black`}
+        className={`bg-background antialiased dark:bg-black`}
       >
         <Toaster />
         <ThemeProvider
